@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby</title>   
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="./images/Logo_wikibot.svg.png" alt="bot-logo" height="15"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Battle Bot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./signin.html">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./signup.html">S'enregistrer</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                        class="rounded-circle"
+                        height="25"
+                        alt="Black and White Portrait of a Man"
+                        loading="lazy">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Mon profil</a>
+                        <a class="dropdown-item" href="#">Deconnexion</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- HERO -->
+    <div class="vh-100">
+        <!-- HERO BACKGROUND -->
+        <div lc-helper="background" class="container-fluid py-5 mb-4 d-flex justify-content-center h-50" style="  background-image: url('./images/bb_blog_1.jpg');
+        background-position: center;
+        background-size:cover;
+        background-repeat:no-repeat">
+        <div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12" style=" backdrop-filter: blur(6px) saturate(102%);
+        -webkit-backdrop-filter: blur(6px) saturate(102%);
+        background-color: rgba(255, 255, 255, 0.45);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);">
+        <!-- HERO TEXT -->
+        <div class="lc-block">
+            <div editable="rich">
+                <h1 class="fw-bolder display-3">Battle Bot</h2>
+            </div>
+        </div>
+        <div class="lc-block col-md-8">
+            <div editable="rich">
+                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus debitis quis, et natus earum, quisquam ab ullam exercitationem cum fuga eos totam a similique porro. Beatae id maiores quas nesciunt?
+                </p>
+            </div>
+        </div>
+        <!-- HERO BUTTON -->
+        <div class="lc-block">
+            <a class="btn btn-dark" href="#" role="button">Let's go !</a>
+        </div>
+    </div>
+</div>
+<!-- HERO GAME PRESENTATION -->
+<div class="title">
+    <h2 class="text-center pt-5 display-3">Lorem ipsum dolor sit amet.</h1>
+    <p class="text-center p-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime earum ipsam adipisci voluptatum hic, nam nisi sit nemo saepe, aliquid fugit officia nulla minima corporis ut atque magnam, autem quod exercitationem? Officiis illo modi dolorum voluptates dolor mollitia asperiores ullam repudiandae quam possimus aliquid non, minus harum provident alias soluta.</p>
+</div>
+</div>
+
+
+<!-- CAROUSEL -->
+<div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        </ol>
+        <!-- ITEMS 1 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/bb_blog_1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Competiteur 1</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="carousel-item">
+                <img src="./images/bb_blog_1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Competiteur 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="carousel-item">
+                <img src="./images/bb_blog_1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Competiteur 3</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="carousel-item">
+                <img src="./images/bb_blog_1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Competiteur 4</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- GAME -->
+<!-- IF NOT CONNECTED -->
+<div class="text-center p-5">
+    <h2 class="display-3">Pas si vite !</h2>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vero suscipit, quia a vel pariatur sit magni iste blanditiis cupiditate atque molestias quae ad tempore, voluptatum voluptates eos, vitae autem quibusdam fugit deserunt! Iusto, odio illum. Sed culpa, distinctio quam iusto veniam omnis minus nesciunt? Iste tenetur error et sequi.</div>
+    <div class="lc-block p-5">
+        <a class="btn btn-dark" href="#" role="button">Je me connecte</a>
+    </div>
+</div>
+<!-- IF CONNECTED -->
+<div class="p-5 vh-100">
+    <div class="row">
+        <div class="col-4 text-center" style="  background-image: url('./images/bb_blog_1.jpg');
+        background-position: center;
+        background-size:cover;
+        background-repeat:no-repeat">
+        Je vote pour le competiteur 1
+        </div>
+        <div class="col-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae perspiciatis officia nisi suscipit voluptatum, eum aperiam explicabo ab sapiente incidunt omnis repellendus adipisci eligendi accusantium doloremque quibusdam ullam facere ad, iure, magnam veniam quia quidem necessitatibus. Autem cum doloremque harum officiis, laudantium quae possimus, fugit at, distinctio incidunt dolorum nesciunt.
+        </div>
+        <div class="col-4 text-center" style="  background-image: url('./images/bb_blog_1.jpg');
+        background-position: center;
+        background-size:cover;
+        background-repeat:no-repeat">
+        Je vote pour le competiteur 1
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-body-tertiary text-center text-lg-start fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2023 Copyright:
+        <a class="text-body" href="#">Cara</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+<!-- SCRIPT -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
