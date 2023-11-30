@@ -1,6 +1,7 @@
 <?php
 
 include 'partials/header.php';
+//get user data
 if (isset($_SESSION['user-id'])) {
     $query = "SELECT * FROM users WHERE id = " . $_SESSION['user-id'];
     $result = mysqli_query($connection, $query);

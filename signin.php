@@ -6,7 +6,7 @@ include 'partials/header.php';
 $username_email = $_SESSION['signin-data']['username_email'] ?? null;
 $password = $_SESSION['signin-data']['password'] ?? null;
 //delete signup data session
-unset($_SESSION['signin-data']);
+// unset($_SESSION['signin-data']);
 
 
 ?>
@@ -14,17 +14,6 @@ unset($_SESSION['signin-data']);
     <div class="container pt-5 pb-5">
         <h3 class="text-black text-center pt-5">VOUS CONNECTER</h3> 
         <div class="row ">
-            <?php if(isset($_SESSION['signup-success'])) : ?> 
-                    <div class="success-message">
-                        <?= $_SESSION['signup-success'];
-                        unset($_SESSION['signup-sucess']); ?>
-                    </div>
-            <?php elseif (isset($_SESSION['signin'])) : ?>
-            <div class="error-message">
-                        <?= $_SESSION['signin'];
-                        unset($_SESSION['signin']); ?>
-                    </div>
-            <?php endif ?>
             <div class="col-lg-12 mx-auto ">
                 <div class="card mt-2 mx-auto p-4 bg-orange">
                     <div class="card-body bg-orange">
@@ -52,9 +41,7 @@ unset($_SESSION['signin-data']);
                         </div>
                     </div>
                 </div>
-            <!-- /.8 -->
             </div>
-        <!-- /.row-->
         </div>
     </div>
 

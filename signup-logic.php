@@ -2,8 +2,8 @@
 
     require 'config/database.php';
 
-    //signup form data if signup button clicked
     if(isset($_POST['submit'])){
+        //get form data, Remove all characters except letters, digits
         $firstName = filter_var($_POST['firstName'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $lastName = filter_var($_POST['lastName'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $pseudo = filter_var($_POST['pseudo'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -43,24 +43,26 @@
                 // var_dump($user_check_result);
                 // echo mysqli_error($connection);
 
+                // Check if line already exist
                 if(mysqli_num_rows($user_check_result) > 0){
                     $_SESSION['signup'] = "Le pseudo ou le mail existe déjà";
                 }else{
                     //Avatar
                     //rename avatar
                     $time = time(); //make each image a unique name
-                    $avatar_name = $time . $avatar['name'];
-                    $avatar_tmp_name = $avatar['tmp_name'];
-                    $avatar_destination_path = 'images/avatar/' . $avatar_name;
+                    $avatar_name = $time . $avatar['name'];//add time to the name
+                    $avatar_tmp_name = $avatar['tmp_name'];//get the temporary name
+                    $avatar_destination_path = 'images/avatar/' . $avatar_name;//set the destination path
                     // DEBOG
                     // echo "Étape 2 passée";
                     
                     //make sure file is image
-                    $allowed_files = ['png','jpg','jpeg'];
-                    $extention = explode('.', $avatar_name);
-                    $extention = end($extention);
+                    $allowed_files = ['png','jpg','jpeg'];//allowed files
+                    $extention = explode('.', $avatar_name);//get the extention
+                    $extention = end($extention);//get the last element of the array
                     // DEBOG
                     // echo "Étape 3 passée";
+
                     if(in_array($extention, $allowed_files)){
                         //make sure image is not too big(1mb)
                         if($avatar['size'] < 1000000 ){

@@ -17,15 +17,15 @@ if(isset($_POST['submit'])){
         if ($avatar['name']) {
             //rename avatar
             $time = time(); //make each image a unique name
-            $avatar_name = $time . $avatar['name'];
-            $avatar_tmp_name = $avatar['tmp_name'];
-            $avatar_destination_path = 'images/avatar/' . $avatar_name;
+            $avatar_name = $time . $avatar['name'];//add time to the name
+            $avatar_tmp_name = $avatar['tmp_name'];//get the temporary name
+            $avatar_destination_path = 'images/avatar/' . $avatar_name;//set the destination path
 
             
             //make sure file is image
-            $allowed_files = ['png','jpg','jpeg'];
-            $extention = explode('.', $avatar_name);
-            $extention = end($extention);
+            $allowed_files = ['png','jpg','jpeg'];//allowed files
+            $extention = explode('.', $avatar_name);//get the extention
+            $extention = end($extention);//get the last element of the array
 
             if(in_array($extention, $allowed_files)){
                 //make sure image is not too big(1mb)
