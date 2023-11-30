@@ -31,10 +31,17 @@ console.log(competitorsListe(competitors));
 // Selection des opposants aléatoire
 function opponent(){
     var currentCompetitors = competitorsListe(competitors);
-    var competitor1 = Math.floor(Math.random() * currentCompetitors.length);
-    var competitor2 = Math.floor(Math.random() * currentCompetitors.length);
-    console.log(currentCompetitors[competitor1]);
-    console.log(currentCompetitors[competitor2]);
+    const competitor1 = Math.floor(Math.random() * currentCompetitors.length);
+    const competitor2 = Math.floor(Math.random() * currentCompetitors.length);
+    while (competitor1 === competitor2) {
+        competitor2 = Math.floor(Math.random() * currentCompetitors.length);
+        }
+        const element1 = dictionnaire[cles[index1]];
+        const element2 = dictionnaire[cles[index2]];
+    
+        return { element1, element2 };
+    }
+    
     // if (competitor1 != competitor2){
     //     console.log(currentCompetitors[competitor1]);
     //     console.log(currentCompetitors[competitor2]);
