@@ -1,60 +1,83 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var competitors = [
-        { name: 'End Game', image: '../images/competitor/competitor1.jpg' , description: 'est un robot de combat de la série télévisée BattleBots. Il est construit par Jack Barker et son fils Jack Barker Jr. Il est connu pour avoir remporté la saison 5.0 de BattleBots, et pour avoir été le premier robot à avoir remporté deux fois le titre de champion de BattleBots.'},
-        { name: 'Huge', image: '../images/competitor/competitor2.jpg', description: 'est un robot de combat de la série télévisée BattleBots. Il est construit par Jack Barker et son fils Jack Barker Jr. Il est connu pour avoir remporté la saison 5.0 de BattleBots, et pour avoir été le premier robot à avoir remporté deux fois le titre de champion de BattleBots.' },
-        { name: 'Warhead', image: '../images/competitor/competitor3.jpg', description:'Warhead' },
-        { name: 'Witch Doctor', image: '../images/competitor/competitor4.jpg', description:'Witch Doctor' }
+let competitors = [
+    ['End Game', '../images/competitor/competitor1.jpg' , 'est un robot de combat de la série télévisée BattleBots. Il est construit par Jack Barker et son fils Jack Barker Jr. Il est connu pour avoir remporté la saison 5.0 de BattleBots, et pour avoir été le premier robot à avoir remporté deux fois le titre de champion de BattleBots.'],
+    ['Huge', '../images/competitor/competitor2.jpg', 'est un robot de combat de la série télévisée BattleBots. Il est construit par Jack Barker et son fils Jack Barker Jr. Il est connu pour avoir remporté la saison 5.0 de BattleBots, et pour avoir été le premier robot à avoir remporté deux fois le titre de champion de BattleBots.' ],
+    ['Warhead', '../images/competitor/competitor3.jpg', 'Lorem Warhead' ],
+    ['Witch Doctor', '../images/competitor/competitor4.jpg', 'Lorem Witch Doctor'] 
     ];
-    var currentRound = 0;
-    var currentPlayerSelection = null;
+var currentRound = 0;
+var playerSelection = null;
 
-    function displayCompetitors(round) {
-        var gameArea = document.getElementById('gameArea');
-        gameArea.innerHTML = `
-        <div class="container-fluid p-5" id="gameArea">
-        <div class="row">
-            <div class="col">
-                <img src="${competitors[round].image}" alt="${competitors[round].name}" class="img-fluid">
-            </div>
-            <div class="col">
-                <p>
-                    <h3>Round ${round + 1}</h3>
-                    ${competitors[round].name} ${competitors[round].description} VS ${competitors[round + 1].name} ${competitors[round + 1].description}
-                </p>
-            </div>
-            <div class="col">
-                <img src="${competitors[round + 1].image}" alt="${competitors[round + 1].name}" class="img-fluid">
-            </div>
-        </div>
-        <div class="container-fluid p-5">
-            <div class="row">
-                <div class="col">
-                    <button .addEventListener("click", vote)>Je vote</button>
-                </div>
-            <div class="col">
-        </div>
-        <div class="col">
-            <button onclick="vote(1)">Je vote</button>
-        </div>
-    </div>
-        `;
+
+
+// Création de la liste des compétiteurs full
+function competitorsListe(competitors){
+    let currentCompetitors = [];
+    for (let i = 0; i < competitors.length; i++) {
+        currentCompetitors.push(competitors[i][currentRound]);
     }
-    
-    function vote(selectedIndex) {
-        currentPlayerSelection = selectedIndex;
-        if (Math.random() < 0.5) {
-            alert('Vous avez perdu!');
-            return;
-        }
+    return currentCompetitors;
+}
+console.log(competitorsListe(competitors));
+
+
+// Selection d'un compétiteur1 aléatoire
+// function competitor1Random(){
+//     var currentCompetitors = competitorsListe(competitors);
+//     const competitor1 = Math.floor(Math.random() * currentCompetitors.length);
+//     console.log(competitor1, currentCompetitors[competitor1]);
+// }
+// competitor1Random();
+
+// Selection des opposants aléatoire
+function opponent(){
+    var currentCompetitors = competitorsListe(competitors);
+    var competitor1 = Math.floor(Math.random() * currentCompetitors.length);
+    var competitor2 = Math.floor(Math.random() * currentCompetitors.length);
+    console.log(currentCompetitors[competitor1]);
+    console.log(currentCompetitors[competitor2]);
+    // if (competitor1 != competitor2){
+    //     console.log(currentCompetitors[competitor1]);
+    //     console.log(currentCompetitors[competitor2]);
+    // } else{
+    //     do {
+    //         console.log(currentCompetitors[competitor1]);
+    //         console.log(currentCompetitors[competitor2]);
+    //     }while (competitor1 == competitor2){
+    //         var competitor2 = Math.floor(Math.random() * currentCompetitors.length);
+    //     }
+    // }
+}
+opponent();
+
+
+
+
+
+
+
+    // var machin= [{
+    //     'name': 'End Game',
+    //     'numero': 5,
+    // }];
+    // var truc= [{
+    //     'name': 'Witch Doctor',
+    //     'mabite': 'oui',
+    //     'numero': 3,
+    // }];
+
+//     function resultatMatch(competitor1, competitor2){
         
-        currentRound++;
-        if (currentRound >= 3) {
-            alert('Félicitations, vous avez gagné!');
-            return;
-        }
+//         let resultat= '';
+//         if (competitor1['numero'] > competitor2['numero']){
+//             resultat = "le 1 gagne";
+//         // }else(competitor1['numero'] < competitor2['numero']){
+//         //     resultat = "le 2 gagne";
+//         // }
+//         }else{
+//             resultat = "le 2 gagne";
+//         };
+//         return resultat;
+//     }
 
-        displayCompetitors(currentRound);
-    }
 
-    displayCompetitors(currentRound);
-});
+// console.log(resultatMatch(machin,truc));
