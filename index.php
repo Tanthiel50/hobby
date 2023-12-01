@@ -25,7 +25,7 @@ $isLoggedIn = isset($_SESSION['user-id']);
         </div>
         <div class="lc-block col-md-8">
             <div editable="rich">
-                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus debitis quis, et natus earum, quisquam ab ullam exercitationem cum fuga eos totam a similique porro. Beatae id maiores quas nesciunt?
+                <p class="lead">C'est beau, ca fait rêver, venez découvrir les battle bot !
                 </p>
             </div>
         </div>
@@ -37,8 +37,8 @@ $isLoggedIn = isset($_SESSION['user-id']);
 </div>
 <!-- HERO GAME PRESENTATION -->
 <div class="title">
-    <h2 class="text-center pt-5 display-3">Lorem ipsum dolor sit amet.</h1>
-    <p class="text-center p-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime earum ipsam adipisci voluptatum hic, nam nisi sit nemo saepe, aliquid fugit officia nulla minima corporis ut atque magnam, autem quod exercitationem? Officiis illo modi dolorum voluptates dolor mollitia asperiores ullam repudiandae quam possimus aliquid non, minus harum provident alias soluta.</p>
+    <h2 class="text-center pt-5 display-3">Ceci est un titre super !</h1>
+    <p class="text-center p-5">Plongez dans l'univers palpitant des battle bots avec notre jeu en ligne révolutionnaire ! Imaginez et construisez votre robot de combat ultime, en choisissant parmi une multitude d'armes tranchantes, de boucliers robustes et de systèmes de propulsion innovants. Une fois votre machine de guerre prête, entrez dans l'arène pour affronter des adversaires du monde entier. Mettez à l'épreuve vos compétences de stratège et de combattant dans des batailles épiques, où chaque décision peut mener à la gloire ou à la défaite. Rejoignez notre communauté grandissante, partagez vos créations et stratégies, et montez dans le classement des meilleurs constructeurs de battle bots. Êtes-vous prêt à dominer l'arène ?</p>
 </div>
 </div>
 
@@ -98,31 +98,36 @@ $isLoggedIn = isset($_SESSION['user-id']);
 <?php if ($isLoggedIn): ?>
     <div class="p-5" id="game">
         <h1 class="text-center my-4 vw-100">
-            Let's the battle begin
+            Let's the bot battle begin
         </h1>
         <div class="container-fluid p-5" id="gameArea">
             <div class="row">
                 <div class="col">
-                    <img src="./images/bb_blog_1.jpg" alt="Image 1" class="img-fluid">
+                    <img src="./images/bb_blog_1.jpg" alt="Image 1" class="img-fluid" id="opponent0">
                 </div>
                 <div class="col">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequatur veniam aliquid at est obcaecati, aspernatur incidunt corrupti animi excepturi iusto unde nam inventore a velit quod cumque, omnis natus reprehenderit minima quidem! Dicta nobis necessitatibus, perspiciatis adipisci ratione possimus officiis omnis amet sunt molestias ea facilis quo fugit harum.
-                    </p>
+                <p id="description0"></p>
+                <p id="description1" class="text-right"></p>
                 </div>
                 <div class="col">
-                    <img src="./images/bb_blog_1.jpg" alt="Image 2" class="img-fluid">
+                    <img src="./images/bb_blog_1.jpg" alt="Image 2" class="img-fluid" id="opponent1">
                 </div>
             </div>
             <div class="container-fluid p-5">
                 <div class="row">
                     <div class="col">
-                        <button>Je vote</button>
                     </div>
-                <div class="col">
+                    <div class="col">
+                        <button onClick="window.location.href=window.location.href" class="d-none">Refresh Page</button>
+                        <button onClick="displayBattle()" id="battle" class="btn btn-dark">Begin Battle</button>
+                    </div>
             </div>
             <div class="col">
-                <button>Je vote</button>
+            </div>
+            <div>
+                <h3 class= "text-center" id="gagnantMessage">
+
+                </h3>
             </div>
         </div>
     </div>

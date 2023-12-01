@@ -45,6 +45,6 @@ if(isset($_POST['submit'])){
     }
 
 }else{
-    header('location: ' . ROOT_URL . 'signin.php');
+    header('location: ' . ROOT_URL . 'index.php');
     die();
 }

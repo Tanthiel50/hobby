@@ -18,6 +18,12 @@ if (isset($_SESSION['user-id'])) {
 <div class="container pt-5 pb-5">
         <h3 class="text-black text-center pt-5">VOTRE PROFIL</h3> 
             <div class="col-lg-12 mx-auto ">
+            <?php if(isset($_SESSION['edit-user'])) : ?> 
+                    <div class="error-message">
+                        <?= $_SESSION['edit-user'];
+                        unset($_SESSION['edit-user']); ?>
+                    </div>
+            <?php endif ?>
                 <div class="card mt-2 mx-auto p-4 bg-orange">
                     <div class="card-body bg-orange">
                         <div class = "container">

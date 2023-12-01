@@ -10,6 +10,16 @@ if(isset($_POST['submit'])){
 
 
     //check for valid input
+
+    $user_check_query = "SELECT * FROM users WHERE (pseudo='$pseudo' OR email='$email') AND id != " . $_SESSION['user-id'];
+    $user_check_result = mysqli_query($connection, $user_check_query);
+
+    if(mysqli_num_rows($user_check_result) > 0){
+    $_SESSION['edit-user'] = "Le pseudo ou l'email est déjà pris. Veuillez en choisir un autre.";
+    header('location: ' . ROOT_URL . 'user.php');
+    die();
+    }
+
     if(!$firstName || !$lastName){
         $_SESSION['edit-user'] = "Changements invalides.";
     } else {
@@ -35,10 +45,10 @@ if(isset($_POST['submit'])){
 
 
                 } else{
-                    $_SESSION['signup'] = 'Taille du fichier trop important. Il doit etre plus petit que 1mb';
+                    $_SESSION['edit-user'] = 'Taille du fichier trop important. Il doit etre plus petit que 1mb';
                 }
             } else {
-                $_SESSION['signup'] = 'Le fichier doit être png, jpg ou jpeg ';
+                $_SESSION['edit-user'] = 'Le fichier doit être png, jpg ou jpeg ';
             }
         }
         //update user
@@ -56,8 +66,6 @@ if(isset($_POST['submit'])){
             $_SESSION['edit-user-success'] = "Utilisateur mis à jour avec succès.";
         }
     }
-    
-
     }
 
 
